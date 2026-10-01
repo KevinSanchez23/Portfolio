@@ -1,0 +1,16 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: left;
+}
+
+.about h2 {
+  text-align: center;
+}
+
+.about p {
+  width: 100%;
+  max-width: 42rem;
+}

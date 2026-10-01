@@ -1,0 +1,43 @@
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  text-align: left;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  background: var(--bg);
+}
+
+.project-card button {
+  margin-top: auto;
+}
+
+.project-card__technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.project-card__technologies li {
+  padding: 0.3rem 0.7rem;
+
+  color: var(--text-h);
+  font-size: 0.85rem;
+  font-weight: 500;
+
+  background: var(--accent-bg);
+  border: 1px solid var(--accent-border);
+  border-radius: 999px;
+}
+
+.project-card__availability {
+  color: var(--text);
+  font-size: 0.85rem;
+  font-style: italic;
+}
