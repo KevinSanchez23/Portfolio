@@ -1,49 +1,33 @@
-import { useState } from "react";
 import "./ProjectCard.css";
 
 type ProjectCardProps = {
   title: string;
+  category: string;
   description: string;
   technologies: string[];
 };
 
 export function ProjectCard({
   title,
+  category,
   description,
   technologies,
 }: ProjectCardProps) {
-  const [expanded, setExpanded] = useState(false);
-
-  const technologyCount = technologies.length;
-
-  function handleToggle() {
-    setExpanded((current) => !current);
-  }
-
   return (
     <article className="project-card">
-    <h3>{title}</h3>
-    <p>{description}</p>
+      <div className="project-card__meta">
+        <span>{category}</span>
+        <span className="project-card__availability">Private project</span>
+      </div>
 
-    <p className="project-card__availability">
-      Private commercial project
-    </p>
+      <h3>{title}</h3>
+      <p className="project-card__description">{description}</p>
 
-    {expanded && (
-        <ul className="project-card__technologies">
+      <ul className="project-card__technologies" aria-label="Technologies">
         {technologies.map((technology) => (
-            <li key={technology}>{technology}</li>
+          <li key={technology}>{technology}</li>
         ))}
-        </ul>
-    )}
-
-    <button
-    type="button"
-    onClick={handleToggle}
-    aria-expanded={expanded}
-    >
-    {expanded ? "Hide technologies" : `Show ${technologyCount} technologies`}
-    </button>
+      </ul>
     </article>
   );
 }

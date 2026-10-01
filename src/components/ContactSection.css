@@ -1,13 +1,32 @@
 .contact-section {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  overflow: hidden;
+  gap: 1.25rem;
   text-align: center;
 }
 
-.contact-section p {
-  max-width: 40rem;
+.contact-section::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  bottom: -16rem;
+  width: 30rem;
+  height: 30rem;
+  background: rgba(168, 85, 247, 0.13);
+  border-radius: 50%;
+  filter: blur(100px);
+}
+
+.contact-section h2 {
+  max-width: 700px;
+  margin-bottom: 0;
+}
+
+.contact-section > p:not(.section-eyebrow) {
+  max-width: 38rem;
 }
 
 .contact-links {
@@ -15,34 +34,38 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 0.75rem;
-
-  margin: 0;
+  margin: 0.75rem 0 0;
   padding: 0;
   list-style: none;
 }
 
 .contact-links a {
   display: inline-flex;
+  min-width: 8rem;
   align-items: center;
   justify-content: center;
-
-  padding: 0.65rem 1rem;
-
+  padding: 0.72rem 1.1rem;
   color: var(--text-h);
+  font-weight: 700;
   text-decoration: none;
-  background: var(--accent-bg);
-  border: 1px solid var(--accent-border);
-  border-radius: 0.5rem;
-
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid var(--border);
+  border-radius: 0.7rem;
   transition:
-    color 150ms ease,
-    background-color 150ms ease,
-    border-color 150ms ease,
-    transform 150ms ease;
+    color 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+.contact-links a:first-child {
+  color: #090b11;
+  background: linear-gradient(110deg, var(--accent), var(--cyan));
+  border-color: transparent;
 }
 
 .contact-links a:hover {
-  color: var(--accent);
   border-color: var(--accent);
   transform: translateY(-2px);
 }
+

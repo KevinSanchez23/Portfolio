@@ -15,6 +15,13 @@ export function Header() {
   return (
     <header id="top" className="site-header">
       <nav className="site-nav" aria-label="Primary navigation">
+        <a className="site-brand" href="#top" aria-label="Back to top">
+          <span className="site-brand__mark" aria-hidden="true">
+            K
+          </span>
+          <span>Kevin Sánchez</span>
+        </a>
+
         <button
           className="menu-button"
           type="button"

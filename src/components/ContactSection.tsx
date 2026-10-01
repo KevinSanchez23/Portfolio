@@ -3,11 +3,12 @@ import "./ContactSection.css";
 export function ContactSection() {
   return (
     <section id="contact" className="contact-section">
-      <h2>Contact</h2>
+      <p className="section-eyebrow">Let’s connect</p>
+      <h2>Have a backend problem worth solving?</h2>
 
       <p>
-        If you would like to get in touch, please feel free to reach out via
-        email or connect with me on LinkedIn.
+        If you’d like to discuss an opportunity or simply connect, send me an
+        email or find me on LinkedIn.
       </p>
 
       <ul className="contact-links">
